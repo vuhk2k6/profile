@@ -1,0 +1,159 @@
+.btn-social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn {
+    position: relative;
+    list-style: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+    border: 2px solid #fff;
+    margin-bottom: 4px;
+}
+
+.btn i, .btn ion-icon {
+    font-size: 20px;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(to top right, var(--i), var(--x), var(--j));
+}
+
+.btn span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn:hover {
+    width: 140px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0);
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50px;
+    background: linear-gradient(45deg, var(--i), var(--j));
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.btn:hover::before {
+    opacity: 1;
+}
+
+.btn::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    height: 100%;
+    border-radius: 60px;
+    background: linear-gradient(45deg, var(--i), var(--j));
+    opacity: 0;
+    transition: 0.5s;
+    z-index: -1;
+    filter: blur(15px);
+}
+
+.btn:hover::after {
+    opacity: 0.5;
+}
+
+.btn span {
+    position: absolute;
+}
+
+.btn .titulo {
+    color: #fff;
+    font-size: 16px !important;
+    text-transform: uppercase;
+    letter-spacing: 2;
+    transform: scale(0);
+    transition: 0.5s;
+    transition-delay: 0s;
+
+}
+
+.btn:hover .titulo {
+    transform: scale(1);
+    transition-delay: 0.25s;
+}
+
+.bubbly-button {
+    height: 46px;
+    margin-top: 20px;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    display: inline-block;
+    font-size: 16px;
+    height: -20px;
+    padding: 7px 30px;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #0778e9;
+    color: #fff;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+    box-shadow: 0 2px 25px rgb(0, 140, 255);
+}
+
+.bubbly-button:focus {
+    outline: 0;
+}
+
+.bubbly-button:before,
+.bubbly-button:after {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 140%;
+    height: 100%;
+    left: -20%;
+    z-index: -1000;
+    transition: all ease-in-out 0.5s;
+    background-repeat: no-repeat;
+}
+
+.bubbly-button:before {
+    display: none;
+    top: -75%;
+    background-image: radial-gradient(circle, #0066ff 20%, transparent 20%), radial-gradient(circle, transparent 20%, #08daff 20%, transparent 30%), radial-gradient(circle, #00c3ff 20%, transparent 20%), radial-gradient(circle, #00c3ff 20%, transparent 20%), radial-gradient(circle, transparent 10%, #00c3ff 15%, transparent 20%), radial-gradient(circle, #00c3ff 20%, transparent 20%), radial-gradient(circle, #00c3ff 20%, transparent 20%), radial-gradient(circle, #00c3ff 20%, transparent 20%), radial-gradient(circle, #00c3ff 20%, transparent 20%);
+    background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+
+.bubbly-button:after {
+    display: none;
+    bottom: -75%;
+    background-image: radial-gradient(circle, #00c3ff 20%, transparent 20%), radial-gradient(circle, #00c3ff 20%, transparent 20%), radial-gradient(circle, transparent 10%, #00aeff 15%, transparent 20%), radial-gradient(circle, #00c3ff 20%, transparent 20%), radial-gradient(circle, #00c3ff 20%, transparent 20%), radial-gradient(circle, #00c3ff 20%, transparent 20%), radial-gradient(circle, #00c3ff 20%, transparent 20%);
+    background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+
+.bubbly-button:active {
+    transform: scale(0.9);
+    background-color: #008cff;
+    box-shadow: 0 2px 25px rgba(0, 119, 255, 0.2);
+}
+
+.bubbly-button.animate:before {
+    display: block;
+    animation: topBubbles ease-in-out 0.75s forwards;
+}
+
+.bubbly-button.animate:after {
+    display: block;
+    animation: bottomBubbles ease-in-out 0.75s forwards;
+}
