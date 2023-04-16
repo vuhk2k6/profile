@@ -1,0 +1,91 @@
+@media (max-width: 46.25em) {
+    @-webkit-keyframes materia {
+        0% {
+            background: #413e3e;
+        }
+
+        50% {
+            -webkit-border-radius: 4px;
+        }
+
+        100% {
+            box-shadow: 0 0 10px 1px #00eeff;
+            width: 80%;
+            height: 80%;
+            background: #18191a;
+            -webkit-border-radius: 25px;
+        }
+    }
+
+    body {
+        background-repeat: no-repeat;
+    }
+
+    body:before {
+        border: none;
+    }
+
+    .social {
+        display: none;
+    }
+
+    .profile-card .profile-header .bia {
+        height: 144px;
+        object-position: 0 -90px;
+    }
+
+    .info .info__1 .decr {
+        font-size: 16px;
+        margin-top: 2px;
+        color: #ccc;
+    }
+
+    .info .info__1 .name {
+        font-size: 33px;
+        margin-top: 57px;
+    }
+
+    .profile-card .profile-header .info {
+        display: flex;
+        width: 100%;
+        position: absolute;
+        left: 25px;
+        top: 87px;
+        flex-wrap: wrap;
+    }
+
+    .profile-card .profile-header .avt {
+        width: 120px;
+        height: 120px;
+    }
+
+    .bubbly-button {
+        height: 38px;
+        margin-top: 28px;
+        border-radius: 6px;
+        margin-left: 35%;
+    }
+
+    .profile-card .profile-header {
+        height: 296px;
+    }
+
+    .profile-card .profile-body .page {
+        flex: 1;
+        background-color: #242526;
+        border-radius: 0;
+        margin-left: 0;
+        overflow: visible;
+        height: 1000px;
+    }
+
+    .profile-card .profile-body {
+        padding: 0;
+    }
+
+    .tab#tab3.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
