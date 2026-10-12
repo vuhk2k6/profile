@@ -23,6 +23,10 @@
         overflow-y: auto;
     }
 
+    body:before {
+        border: none;
+    }
+
     .wrapper {
         min-height: 100vh;
         height: auto;
