@@ -1,91 +1,202 @@
-@media (max-width: 46.25em) {
-    @-webkit-keyframes materia {
-        0% {
-            background: #413e3e;
-        }
+/* ====================================================
+   iOS 27 RESPONSIVE LIQUID GLASS ADAPTATIONS
+==================================================== */
 
-        50% {
-            -webkit-border-radius: 4px;
-        }
-
-        100% {
-            box-shadow: 0 0 10px 1px #00eeff;
-            width: 80%;
-            height: 80%;
-            background: #18191a;
-            -webkit-border-radius: 25px;
-        }
+@media (max-width: 920px) {
+    .profile-card {
+        width: 94vw;
+        height: 600px;
     }
 
+    .profile-card .profile-body {
+        padding: 0 24px 24px;
+        gap: 16px;
+    }
+
+    .profile-card .profile-body .social {
+        width: 180px;
+    }
+}
+
+@media (max-width: 680px) {
     body {
-        background-repeat: no-repeat;
+        overflow-y: auto;
     }
 
-    body:before {
-        border: none;
+    .wrapper {
+        min-height: 100vh;
+        height: auto;
+        padding: 24px 12px;
+        align-items: flex-start;
     }
 
-    .social {
-        display: none;
+    .profile-card {
+        position: relative;
+        left: auto;
+        top: auto;
+        transform: none;
+        width: 100%;
+        max-width: 440px;
+        height: auto;
+        max-height: none;
+        margin: 0 auto;
+        border-radius: 30px;
+        animation: none;
+        opacity: 1;
+    }
+
+    .liquid-specular-sheen,
+    .liquid-glass-border {
+        border-radius: 30px;
+    }
+
+    .ios-status-pill {
+        top: 14px;
+        right: 14px;
+        padding: 4px 10px;
+        font-size: 10px;
+    }
+
+    .profile-card .profile-header {
+        height: auto;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
     }
 
     .profile-card .profile-header .bia {
-        height: 144px;
-        object-position: 0 -90px;
+        height: 135px;
     }
 
-    .info .info__1 .decr {
-        font-size: 16px;
-        margin-top: 2px;
-        color: #ccc;
-    }
-
-    .info .info__1 .name {
-        font-size: 33px;
-        margin-top: 57px;
+    .profile-card .profile-header .bia-overlay {
+        height: 135px;
     }
 
     .profile-card .profile-header .info {
-        display: flex;
-        width: 100%;
-        position: absolute;
-        left: 25px;
-        top: 87px;
-        flex-wrap: wrap;
+        position: relative;
+        top: -55px;
+        left: 0;
+        right: 0;
+        padding: 0 16px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .avt-container {
+        width: 110px;
+        height: 110px;
     }
 
     .profile-card .profile-header .avt {
-        width: 120px;
-        height: 120px;
+        width: 110px;
+        height: 110px;
+    }
+
+    .info .info__1 {
+        align-items: center;
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    .info .info__1 .name-row {
+        justify-content: center;
+    }
+
+    .info .info__1 .name {
+        font-size: 26px;
+    }
+
+    .info .info__1 .decr {
+        font-size: 12px;
+        padding: 3px 10px;
     }
 
     .bubbly-button {
         height: 38px;
-        margin-top: 28px;
-        border-radius: 6px;
-        margin-left: 35%;
-    }
-
-    .profile-card .profile-header {
-        height: 296px;
-    }
-
-    .profile-card .profile-body .page {
-        flex: 1;
-        background-color: #242526;
-        border-radius: 0;
-        margin-left: 0;
-        overflow: visible;
-        height: 1000px;
+        padding: 0 20px;
+        font-size: 13px;
+        margin-bottom: 0;
     }
 
     .profile-card .profile-body {
-        padding: 0;
+        flex-direction: column;
+        height: auto;
+        padding: 0 16px 20px;
+        gap: 14px;
+        margin-top: -35px;
+    }
+
+    .profile-card .profile-body .social {
+        width: 100%;
+        padding: 12px 14px;
+        border-radius: 20px;
+    }
+
+    .profile-card .profile-body .social__heading {
+        margin-bottom: 8px;
+        font-size: 11px;
+    }
+
+    .btn-social {
+        flex-direction: row;
+        justify-content: center;
+        gap: 14px;
+    }
+
+    .btn:hover {
+        width: 44px;
+        transform: scale(1.1);
+    }
+
+    .btn:hover .titulo {
+        display: none;
+    }
+
+    .btn:hover i {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    .profile-card .profile-body .page {
+        width: 100%;
+        border-radius: 20px;
+        min-height: 230px;
+    }
+
+    .nav-tabs {
+        margin: 10px 10px 6px;
+        padding: 3px;
+        border-radius: 14px;
+    }
+
+    .nav-item {
+        padding: 6px 6px;
+        font-size: 12px;
+        border-radius: 11px;
+    }
+
+    .bg-active {
+        border-radius: 11px;
+    }
+
+    .content-tabs {
+        padding: 6px 12px 14px;
+    }
+
+    .content-tabs .tab-line {
+        padding: 8px 10px;
+        font-size: 12.5px;
+        gap: 10px;
     }
 
     .tab#tab3.active {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
+        gap: 12px;
+    }
+
+    .message-modal-card {
+        padding: 22px 18px;
+        border-radius: 26px;
     }
 }
