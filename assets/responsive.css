@@ -23,8 +23,12 @@
         overflow-y: auto;
     }
 
+    /* Completely disable circle mask on mobile so it NEVER intercepts touches */
     body:before {
-        border: none;
+        display: none !important;
+        pointer-events: none !important;
+        content: none !important;
+        border: none !important;
     }
 
     .wrapper {
@@ -32,26 +36,46 @@
         height: auto;
         padding: 24px 12px;
         align-items: flex-start;
+        position: relative;
+        z-index: 10;
+        pointer-events: auto;
     }
 
     .profile-card {
         position: relative;
         left: auto;
         top: auto;
-        transform: none;
+        transform: none !important;
         width: 100%;
         max-width: 440px;
         height: auto;
         max-height: none;
         margin: 0 auto;
         border-radius: 30px;
-        animation: none;
-        opacity: 1;
+        animation: none !important;
+        opacity: 1 !important;
+        overflow: visible;
+        z-index: 20;
+        pointer-events: auto;
+    }
+
+    /* Ensure content is immediately visible and clickable on mobile */
+    .profile-card .profile-header,
+    .profile-card .profile-body,
+    .profile-card .info,
+    .profile-card .page,
+    .profile-card .social {
+        opacity: 1 !important;
+        animation: none !important;
+        pointer-events: auto !important;
+        position: relative;
+        z-index: 10;
     }
 
     .liquid-specular-sheen,
     .liquid-glass-border {
         border-radius: 30px;
+        pointer-events: none !important;
     }
 
     .ios-status-pill {
@@ -73,11 +97,13 @@
 
     .profile-card .profile-header .bia-overlay {
         height: 135px;
+        pointer-events: none !important;
     }
 
     .profile-card .profile-header .info {
         position: relative;
-        top: -55px;
+        margin-top: -55px;
+        top: 0;
         left: 0;
         right: 0;
         padding: 0 16px;
@@ -85,11 +111,14 @@
         align-items: center;
         text-align: center;
         gap: 10px;
+        z-index: 12;
+        pointer-events: auto;
     }
 
     .avt-container {
         width: 110px;
         height: 110px;
+        pointer-events: auto;
     }
 
     .profile-card .profile-header .avt {
@@ -117,10 +146,15 @@
     }
 
     .bubbly-button {
-        height: 38px;
-        padding: 0 20px;
-        font-size: 13px;
+        height: 42px;
+        padding: 0 22px;
+        font-size: 13.5px;
         margin-bottom: 0;
+        cursor: pointer;
+        pointer-events: auto !important;
+        touch-action: manipulation;
+        position: relative;
+        z-index: 15;
     }
 
     .profile-card .profile-body {
@@ -128,13 +162,17 @@
         height: auto;
         padding: 0 16px 20px;
         gap: 14px;
-        margin-top: -35px;
+        margin-top: 10px;
+        position: relative;
+        z-index: 10;
+        pointer-events: auto;
     }
 
     .profile-card .profile-body .social {
         width: 100%;
         padding: 12px 14px;
         border-radius: 20px;
+        pointer-events: auto;
     }
 
     .profile-card .profile-body .social__heading {
@@ -146,61 +184,94 @@
         flex-direction: row;
         justify-content: center;
         gap: 14px;
+        position: relative;
+        z-index: 15;
+        pointer-events: auto;
+    }
+
+    .btn {
+        width: 44px !important;
+        height: 44px !important;
+        cursor: pointer;
+        pointer-events: auto !important;
+        touch-action: manipulation;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        position: relative;
+        z-index: 15;
     }
 
     .btn:hover {
-        width: 44px;
-        transform: scale(1.1);
+        width: 44px !important;
+        transform: scale(1.08);
     }
 
-    .btn:hover .titulo {
-        display: none;
+    .btn .titulo {
+        display: none !important;
     }
 
-    .btn:hover i {
-        transform: scale(1);
-        opacity: 1;
+    .btn i, .btn ion-icon {
+        transform: scale(1) !important;
+        opacity: 1 !important;
+        pointer-events: none !important;
     }
 
     .profile-card .profile-body .page {
         width: 100%;
         border-radius: 20px;
         min-height: 230px;
+        position: relative;
+        z-index: 10;
+        pointer-events: auto;
     }
 
     .nav-tabs {
         margin: 10px 10px 6px;
         padding: 3px;
         border-radius: 14px;
+        position: relative;
+        z-index: 15;
+        pointer-events: auto;
     }
 
     .nav-item {
-        padding: 6px 6px;
-        font-size: 12px;
+        padding: 8px 6px;
+        font-size: 13px;
         border-radius: 11px;
+        cursor: pointer;
+        pointer-events: auto !important;
+        touch-action: manipulation;
+        position: relative;
+        z-index: 16;
     }
 
     .bg-active {
         border-radius: 11px;
+        pointer-events: none !important;
     }
 
     .content-tabs {
         padding: 6px 12px 14px;
+        pointer-events: auto;
     }
 
     .content-tabs .tab-line {
-        padding: 8px 10px;
-        font-size: 12.5px;
+        padding: 9px 10px;
+        font-size: 13px;
         gap: 10px;
+        pointer-events: auto;
     }
 
     .tab#tab3.active {
         flex-direction: row;
         gap: 12px;
+        pointer-events: auto;
     }
 
     .message-modal-card {
         padding: 22px 18px;
         border-radius: 26px;
+        pointer-events: auto;
     }
 }

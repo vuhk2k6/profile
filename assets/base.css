@@ -52,6 +52,7 @@ body:before {
     top: 100%;
     z-index: 2;
     display: block;
+    pointer-events: none !important;
     -webkit-border-radius: 50%;
     border-radius: 50%;
     -webkit-transform: translate(-50%, -50%);
